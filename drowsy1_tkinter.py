@@ -11,7 +11,7 @@ import winsound
 # Initialize the camera and Dlib detectors
 cap = cv2.VideoCapture(0)
 detector = dlib.get_frontal_face_detector()
-predictor = dlib.shape_predictor("C:/Users/bhavy/OneDrive/Documents/miniproject_3.1/shape_predictor_68_face_landmarks.dat")
+predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
 
 # Global variables for drowsiness detection
 sleep = 0
@@ -135,7 +135,7 @@ def create_frontend():
     root.geometry("1950x1080")
 
     # Load and resize background image
-    bg_image = Image.open(r"C:\Users\bhavy\OneDrive\Documents\miniproject_3.1\bg2.jpg")
+    bg_image = Image.open(r"bg2.jpg")
     bg_image = bg_image.resize((root.winfo_screenwidth(), root.winfo_screenheight()), Image.LANCZOS)
     bg_image_tk = ImageTk.PhotoImage(bg_image)
 
